@@ -15,7 +15,6 @@ app.get('/api/users', (req, res) => {
     res.json(users);
 });
 
-
 app.post('/api/users', async (req, res) => {
 
     try{
@@ -38,7 +37,6 @@ app.post('/api/users', async (req, res) => {
 
 });
 
-
 app.post('/api/users/login', async (req, res) => {
 
     const { name, password } =  req.body;
@@ -60,6 +58,5 @@ app.post('/api/users/login', async (req, res) => {
 
     res.status(404).json({ message: "Cannot find user" });
 })
-
 
 app.listen(3000, () => { console.log("server listening on port 3000" )});
